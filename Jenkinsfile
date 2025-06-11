@@ -7,7 +7,7 @@ agent any
 stages {
 stage ("git clone") {
 steps {
- git "https://github.com/rupali9596/mavcode-1234.git"
+ git clone "https://github.com/rupali9596/mavcode-1234.git"
 }
 }
 stage ("compile") {
