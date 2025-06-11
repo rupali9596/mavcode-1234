@@ -20,9 +20,9 @@ steps {
  sh "mvn package"
 }
 }
-stage ("package") {
+stage ("deploy") {
 steps {
- sh "mvn package"
+ sh "mvn deploy"
 }
 }  
 }
