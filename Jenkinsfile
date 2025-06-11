@@ -5,24 +5,29 @@ maven "M2_HOME"
 }
 agent any
 stages {
-stage ("git clone") {
+stage ('git clone') {
 steps {
- git clone "https://github.com/rupali9596/mavcode-1234.git"
+ git 'https://github.com/rupali9596/mavcode-1234.git'
 }
 }
-stage ("compile") {
+stage ('compile') {
 steps {
- sh "mvn compile"
+ sh 'mvn compile'
 }
 }
-stage ("package") {
+stage ('unit test') {
 steps {
- sh "mvn package"
+ sh 'mvn unit test'
 }
-}
-stage ("deploy") {
+}      
+stage ('package') {
 steps {
- sh "mvn deploy"
+ sh 'mvn package'
+}
+}
+stage ('deploy') {
+steps {
+ sh 'mvn deploy'
 }
 }  
 }
