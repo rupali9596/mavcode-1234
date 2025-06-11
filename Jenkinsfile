@@ -15,9 +15,9 @@ steps {
  sh 'mvn compile'
 }
 }
-stage ("unit test") {
+stage ("test") {
 steps {
- sh 'mvn unit test'
+ sh 'mvn test'
 }
 }      
 stage ("package") {
@@ -25,10 +25,5 @@ steps {
  sh 'mvn package'
 }
 }
-stage ("deploy'") {
-steps {
- sh 'mvn deploy'
-}
-}  
 }
 }
